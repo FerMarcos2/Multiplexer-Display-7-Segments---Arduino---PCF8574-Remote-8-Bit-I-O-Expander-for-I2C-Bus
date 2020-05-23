@@ -75,18 +75,11 @@ void PCF8574_D7S::Multiplexer(float number,char _pin[],int wait)
 			for(_k=0;_k<_ndigits;_k++){
 				if(_k==(_ndigits-numintdec.length()+i)){
 					digitalWrite(_pin[_k],HIGH);
-//					Serial.print("Digito: ");
-//					Serial.print(numintdec[i]);
-//					Serial.println("ALTO");
 				}else{
 					digitalWrite(_pin[_k],LOW);
-//					Serial.print("Digito: ");
-//					Serial.print(numintdec[i]);
-//					Serial.println("BAJO");
 				}
-//				delay(1000);
 			}
-		}else{				//Select Display Common Catode
+		}else{		 //Select Display Common Catode
 			for(_k=0;_k<numintdec.length();_k--){
 				if(i==_k){
 					digitalWrite(_pin[_k],LOW);
@@ -96,12 +89,10 @@ void PCF8574_D7S::Multiplexer(float number,char _pin[],int wait)
 			}			
 			Segments=~Segments;
 		}
-//		Serial.println("---------------------------------");
 		Wire.beginTransmission(_addressSegment);
 		Wire.write(Segments);
 		Wire.endTransmission();
 		delay(wait);
 		digitalWrite(_pin[_ndigits-numintdec.length()+i],LOW);
-	//	delay(wait*(numintdec.length()-i));
 	}	
 }
