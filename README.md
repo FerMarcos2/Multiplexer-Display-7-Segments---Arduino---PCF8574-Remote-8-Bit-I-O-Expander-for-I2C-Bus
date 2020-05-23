@@ -1,7 +1,7 @@
 # Multiplexer-Display-7-Segments---Arduino---PCF8574-Remote-8-Bit-I-O-Expander-for-I2C-Bus
 
 Design of a 7-segment Multiplexer with Arduino, which can display integer, floating numbers. The multiplexer works as follows:       
-    * The digital ports connect to the common displays, which will activate the corresponding digit to display on the          display.         * By I2C communication with the PCF8574 Expander, the segments of the displays are connected and controlled. 
+    * The digital ports connect to the common displays, which will activate the corresponding digit to display on the          display.            * By I2C communication with the PCF8574 Expander, the segments of the displays are connected and controlled. 
  The library provides flexibility at the time of circuit design, allowing to make the following configurations:       
     * Configure the number of displays that will be connected to the Arduino.       
     * Configure the type of display to be used, either common anode or common status.      
